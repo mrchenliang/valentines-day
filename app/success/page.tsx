@@ -1,7 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-
 export default function SuccessPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-rose-100 to-red-100 p-4">
@@ -12,12 +10,10 @@ export default function SuccessPage() {
 
         {/* Couple image */}
         <div className="relative w-full max-w-md mx-auto mb-8 aspect-square rounded-2xl overflow-hidden shadow-lg">
-          <Image
-            src="/couple-image-1.JPG"
+          <img
+            src="/valentines-day/couple-image-1.JPG"
             alt="Beautiful couple"
-            fill
-            className="object-cover"
-            priority
+            className="w-full h-full object-cover"
           />
         </div>
 

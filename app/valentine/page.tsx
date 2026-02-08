@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import Image from 'next/image'
 
 export default function ValentinePage() {
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 50, y: 50 })
@@ -15,20 +14,20 @@ export default function ValentinePage() {
     if (!hasMoved) {
       setHasMoved(true)
     }
-    
+
     const container = containerRef.current
     const button = noButtonRef.current
     if (!container || !button) return
 
     const containerRect = container.getBoundingClientRect()
     const buttonRect = button.getBoundingClientRect()
-    
+
     const maxX = containerRect.width - buttonRect.width - 20
     const maxY = containerRect.height - buttonRect.height - 20
-    
+
     const newX = Math.max(10, Math.min(maxX, Math.random() * maxX))
     const newY = Math.max(10, Math.min(maxY, Math.random() * maxY))
-    
+
     setNoButtonPosition({ x: newX, y: newY })
   }
 
@@ -58,7 +57,7 @@ export default function ValentinePage() {
     setIsTouching(true)
     setNoClickCount(prev => prev + 1)
     moveNoButton()
-    
+
     // Reset touching state after a delay
     setTimeout(() => {
       setIsTouching(false)
@@ -76,18 +75,16 @@ export default function ValentinePage() {
         <h1 className="text-4xl md:text-6xl font-bold text-pink-600 mb-6">
           Will you be my Valentine? 💕
         </h1>
-        
+
         {/* Square image */}
         <div className="relative w-full max-w-md mx-auto mb-8 aspect-square rounded-2xl overflow-hidden shadow-lg">
-          <Image
-            src="/couple-image.JPEG"
+          <img
+            src="/valentines-day/couple-image.JPEG"
             alt="Beautiful couple"
-            fill
-            className="object-cover"
-            priority
+            className="w-full h-full object-cover"
           />
         </div>
-        
+
         <div ref={containerRef} className="relative h-32 md:h-24 mb-8 flex items-center justify-center gap-4 md:gap-6 overflow-visible">
           <button
             onClick={handleYesClick}
@@ -103,7 +100,7 @@ export default function ValentinePage() {
           >
             Yes! 💖
           </button>
-          
+
           <button
             ref={noButtonRef}
             onMouseEnter={handleNoHover}
@@ -128,7 +125,7 @@ export default function ValentinePage() {
             No
           </button>
         </div>
-        
+
         <p className="text-gray-600 text-lg">
           Choose wisely... 😊
         </p>
