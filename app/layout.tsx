@@ -2,16 +2,19 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 const baseUrl = 'https://mrchenliang.github.io/valentines-day'
+const isProd = process.env.NODE_ENV === 'production'
+// Use absolute URL for production to ensure it works on GitHub Pages
+const faviconPath = isProd ? `${baseUrl}/favicon.svg` : '/favicon.svg'
 
 export const metadata: Metadata = {
   title: 'Valentine\'s Day 💕',
   description: 'A special question for someone special',
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: faviconPath, type: 'image/svg+xml' },
     ],
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    shortcut: faviconPath,
+    apple: faviconPath,
   },
   openGraph: {
     title: 'Valentine\'s Day 💕',
