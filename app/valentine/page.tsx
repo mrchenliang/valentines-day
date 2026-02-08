@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { createPath } from '@/lib/paths'
 
 export default function ValentinePage() {
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 50, y: 50 })
@@ -36,7 +37,7 @@ export default function ValentinePage() {
   }
 
   function handleYesClick() {
-    window.location.href = '/valentines-day/success'
+    window.location.href = createPath('success')
   }
 
   function handleNoClick(e: React.MouseEvent) {

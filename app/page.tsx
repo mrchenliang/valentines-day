@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { createPath } from '@/lib/paths'
 
 const funnyErrorMessages = [
   'Are you sure? Who are you? 🤔',
@@ -22,7 +23,7 @@ export default function PasswordPage() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (password.trim().toLowerCase() === 'chen') {
-      window.location.href = '/valentines-day/valentine'
+      window.location.href = createPath('valentine')
     } else {
       const randomMessage = funnyErrorMessages[Math.floor(Math.random() * funnyErrorMessages.length)]
       setError(randomMessage)
