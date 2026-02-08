@@ -1,5 +1,7 @@
 'use client'
 
+import { getImagePath } from '@/lib/imagePath'
+
 export default function SuccessPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-rose-100 to-red-100 p-4">
@@ -11,7 +13,7 @@ export default function SuccessPage() {
         {/* Couple image */}
         <div className="relative w-full max-w-md mx-auto mb-8 aspect-square rounded-2xl overflow-hidden shadow-lg">
           <img
-            src="/couple-image-1.JPG"
+            src={getImagePath('couple-image-1.JPG')}
             alt="Beautiful couple"
             className="w-full h-full object-cover"
           />

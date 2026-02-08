@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { createPath } from '@/lib/paths'
+import { getImagePath } from '@/lib/imagePath'
 
 export default function ValentinePage() {
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 50, y: 50 })
@@ -80,7 +81,7 @@ export default function ValentinePage() {
         {/* Square image */}
         <div className="relative w-full max-w-md mx-auto mb-8 aspect-square rounded-2xl overflow-hidden shadow-lg">
           <img
-            src="/couple-image.JPEG"
+            src={getImagePath('couple-image.JPEG')}
             alt="Beautiful couple"
             className="w-full h-full object-cover"
           />
