@@ -34,7 +34,7 @@ export default function SuccessPage() {
             Thank you! 💕
           </p>
           <a
-            href="sms:7802450708?body=I%20love%20you%20too%2C%20Chen.%20you%20are%20the%20best%20boyfriend"
+            href="sms:7802450708?body=I%20love%20you%20too%2C%20Chen.%20you%20are%20the%20best%20boyfriend!!"
             className="inline-block bg-gradient-to-r from-pink-500 to-rose-500 text-white px-8 py-3 rounded-full font-semibold text-lg hover:from-pink-600 hover:to-rose-600 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
           >
             Text Me 📱
