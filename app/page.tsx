@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 
 const funnyErrorMessages = [
   'Are you sure? Who are you? 🤔',
@@ -19,12 +18,11 @@ const funnyErrorMessages = [
 export default function PasswordPage() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
-  const router = useRouter()
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (password.trim().toLowerCase() === 'chen') {
-      router.push('/valentine')
+      window.location.href = '/valentines-day/valentine'
     } else {
       const randomMessage = funnyErrorMessages[Math.floor(Math.random() * funnyErrorMessages.length)]
       setError(randomMessage)

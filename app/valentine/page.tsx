@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
 export default function ValentinePage() {
@@ -11,7 +10,6 @@ export default function ValentinePage() {
   const [isTouching, setIsTouching] = useState(false)
   const noButtonRef = useRef<HTMLButtonElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
-  const router = useRouter()
 
   function moveNoButton() {
     if (!hasMoved) {
@@ -39,7 +37,7 @@ export default function ValentinePage() {
   }
 
   function handleYesClick() {
-    router.push('/success')
+    window.location.href = '/valentines-day/success'
   }
 
   function handleNoClick(e: React.MouseEvent) {
