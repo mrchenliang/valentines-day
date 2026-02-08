@@ -59,7 +59,7 @@ git commit -m "Initial commit"
 
 3. **Connect and push to GitHub:**
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git remote add origin https://github.com/mrchenliang/valentines-day
 git branch -M main
 git push -u origin main
 ```
