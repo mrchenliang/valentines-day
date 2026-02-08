@@ -11,7 +11,7 @@ export default function SuccessPage() {
         {/* Couple image */}
         <div className="relative w-full max-w-md mx-auto mb-8 aspect-square rounded-2xl overflow-hidden shadow-lg">
           <img
-            src="/valentines-day/couple-image-1.JPG"
+            src="/couple-image-1.JPG"
             alt="Beautiful couple"
             className="w-full h-full object-cover"
           />

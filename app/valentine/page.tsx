@@ -79,7 +79,7 @@ export default function ValentinePage() {
         {/* Square image */}
         <div className="relative w-full max-w-md mx-auto mb-8 aspect-square rounded-2xl overflow-hidden shadow-lg">
           <img
-            src="/valentines-day/couple-image.JPEG"
+            src="/couple-image.JPEG"
             alt="Beautiful couple"
             className="w-full h-full object-cover"
           />

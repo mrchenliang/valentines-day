@@ -5,7 +5,9 @@ export const metadata: Metadata = {
   title: 'Valentine\'s Day',
   description: 'A special question for someone special',
   icons: {
-    icon: '/valentines-day/favicon.svg',
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
 }
 
